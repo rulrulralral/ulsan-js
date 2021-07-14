@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .all {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+
+        .header {
+
+            height: 44px;
+            background-color: black;
+
+        }
+
+        .main {
+            background-color: grey;
+            flex-grow: 2;
+        }
+
+        .foot {
+            background-color: wheat;
+            height: 100px;
+            flex-grow: 0.3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+
+        <header class="header">
+
+        </header>
+
+        <main class="body">
+
+        </main>
+        <foot class="foot">
+
+        </foot>
+
+    </div>
+
+</body>
+
+</html>

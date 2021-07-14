@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            /* 바디 전체의 브라우저에서 임의로 잡은 마진을 제거한다. */
+        }
+
+        /* nav {
+            display: flex;
+            justify-content: center;
+        } */
+        nav {
+            background-color: black;
+        }
+
+
+        /* 헤더의 제일 밖을 검은색으로 만든다. */
+        /* nav 는 헤더 전체를 의미 menu 는 할당된 공간   */
+        .menus {
+            height: 44px;
+            margin: 0 auto;
+            /* 임의로 잡아둔 마진의 크기를(상,하) 0으로 만든다. 그리고 좌우의 마진은 auto (좌,우) 맞출 수 있다. */
+            list-style: none;
+            /* li를 사용하면서 생기는 불릿을 지운다. */
+            display: flex;
+            /* 위치를 잡는것 헤더가 좌측으로 늘어진다. 원래는 아래로 잡힘 (가로로 잡아준다.) */
+            justify-content: space-between;
+            /* 헤더를 공간을 주며 간격을 별려준다  */
+            align-items: center;
+            padding: 0;
+            /* 임의로 잡아둔 공간을 지운다 */
+            padding-left: 22px;
+            padding-right: 22px;
+            /* 좌측 우측 공간 22픽셀을 잡아 헤더를 중앙 쪽으로 옮겨준다. */
+            max-width: 1300px;
+            /* 홈페이지를 잡고 늘렸을때 헤더가 1300px까지만 늘어나게 함 */
+            color: wheat;
+            /* menus의 값의 색을 정해준다. */
+
+        }
+
+        .logo {
+            display: none;
+        }
+
+        /*  logo 라는 것을 디스플레이로 보지 않겠다. */
+        @media screen and (max-width: 768px)
+
+        /* 스크린이 0~768 픽셀 까지일때 안 */
+            {
+            .menus {
+                display: none;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .logo {
+                display: block;
+            }
+        }
+
+        .all {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+
+        /* 헤더,바디,푸터의 부모 클래스를 만든다  =>  왜냐하면 홈페이지 전체를 */
+        .main {
+            background-color: grey;
+            flex-grow: 2;
+
+        }
+
+        .footer {
+
+            background-color: wheat;
+            height: 100px;
+            flex-grow: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <header>
+            <nav>
+                <div class="logo">Logo!</div>
+                <ul class="menus">
+                    <li class="menu">login</li>
+                    <li class="menu">mac</li>
+                    <li class="menu">iphone</li>
+                    <li class="menu">ipad</li>
+                    <li class="menu">msds</li>
+                    <li class="menu">고객지원</li>
+                    <li class="menu">7</li>
+                    <li class="menu">8</li>
+                    <li class="menu">9</li>
+                </ul>
+
+            </nav>
+        </header>
+        <main class='main'>
+
+        </main>
+        <footer class='footer'>
+
+        </footer>
+    </div>
+</body>
+
+</html>

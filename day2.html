@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+
+    }
+
+    .item {
+        flex-basis: 100px;
+        /* width랑 같은 것 (자기 영역을 찾아는 것 ) but 글자를 늘리게 된다면
+        보더가 같이 늘어나지만 width를 준다면 width에 준 값 (픽셀) */
+
+        flex-grow: 2;
+        height: 100px;
+        background-color: crimson;
+        /* 보더 색 */
+        border: 1px solid black;
+        /* 보더 나눠주는 것 */
+        overflow: hidden;
+        /* width를 쓰게 되었을 떄 튀어나가는 부분을 숨긴다. */
+
+        /* max-width: 100px    */
+    }
+</style>
+
+<body>
+    <div class='container'>
+        <div class='item' style='flex-grow:2'></div>
+        <div class='item'></div>
+        <div class='item'></div>
+    </div>
+</body>
+
+</html>
